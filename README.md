@@ -1,7 +1,7 @@
 # dotfiles
 
 
-#Good Resources
+# Good Resources
 
     [video]how to manage your dotfiles and save it on github: https://www.youtube.com/watch?v=awtfkl50bUQ&ab_channel=ElliotJackson
     [text] how to manage your dotfiles and save it on github: https://www.atlassian.com/git/tutorials/dotfiles
