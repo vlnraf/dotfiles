@@ -102,7 +102,7 @@ alias vim="nvim"
 alias vi="nvim"
 alias oldvim="vim"
 alias protege='/opt/Protege-5.5.0/run.sh'
-alias config='/usr/bin/git --git-dir=/home/raffaele/dotfiles/ --work-tree=/home/raffaele'
+alias config='/usr/bin/git --git-dir=$HOME/dotfiles/ --work-tree=/home/raffaele'
 export EDITOR="nvim"
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
