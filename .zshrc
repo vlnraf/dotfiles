@@ -105,6 +105,8 @@ alias protege='/opt/Protege-5.5.0/run.sh'
 alias config='/usr/bin/git --git-dir=$HOME/dotfiles/ --work-tree=/home/raffaele'
 export EDITOR="nvim"
 
-eval $(ssh-agent)
-ssh-add ~/.ssh/id_rsa
+# eval $(ssh-agent)
+# ssh-add ~/.ssh/id_rsa
+eval `keychain --eval --nogui -Q -q id_rsa`
+
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
