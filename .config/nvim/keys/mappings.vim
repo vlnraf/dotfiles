@@ -20,6 +20,11 @@ nnoremap <M-l>    :vertical resize +2<CR>
 " Alternate way to save
 nnoremap <C-s> :w<CR>
 
+" TAB in general mode will move to text buffer
+nnoremap <silent> <TAB> gt
+" SHIFT-TAB will go back
+nnoremap <silent> <S-TAB> gT
+
 "Setta <C-w>h per lo split delle finestre in orizzontale
 nnoremap <C-w>h :split <CR>
 
