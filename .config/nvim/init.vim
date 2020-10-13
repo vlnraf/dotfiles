@@ -3,6 +3,8 @@ set mouse=a
 set relativenumber
 set number
 set noswapfile
+" setted for dev-icons plugin
+set encoding=UTF-8
 
 call plug#begin('~/.vim/plugged')
 
@@ -30,6 +32,12 @@ Plug 'vim-airline/vim-airline-themes'
 " If you don't have nodejs and yarn
 " use pre build
 Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() } }
+
+" set dev-icons
+Plug 'ryanoasis/vim-devicons'
+
+" python highlighter
+" Plug 'numirias/semshi', {'do': ':UpdateRemotePlugins'}
 
 call plug#end()
 
@@ -100,7 +108,6 @@ inoremap [<CR> [<CR>]<Esc>ko
 inoremap (<CR> (<CR>)<Esc>ko
 
 
-
 "---------------------------------------------------------FZF--------------------------------------------------
 "File finder in git
 nmap <leader>F :GFiles<CR>
@@ -150,7 +157,8 @@ if has("patch-8.1.1564")
   " Recently vim can merge signcolumn and number column into one
   set signcolumn=number
 else
-  set signcolumn=yes
+  set signcolumn=number
+  " set signcolumn=yes
 endif
 
 " Use tab for trigger completion with characters ahead and navigate.
