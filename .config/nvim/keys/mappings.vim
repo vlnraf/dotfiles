@@ -21,7 +21,7 @@ nnoremap <M-l>    :vertical resize +2<CR>
 nnoremap <C-s> :w<CR>
 
 "Setta <C-w>h per lo split delle finestre in orizzontale
-nnoremap <C-w>h :split <return>
+nnoremap <C-w>h :split <CR>
 
 "Disable arrow keys in Normal mode
 no <Up> <Nop>
