@@ -22,6 +22,12 @@ Plug 'vim-airline/vim-airline'
 "Themi per vim airline
 Plug 'vim-airline/vim-airline-themes'
 
+" Git integration in Vim
+Plug 'mhinz/vim-signify'
+Plug 'tpope/vim-fugitive'
+Plug 'tpope/vim-rhubarb'
+Plug 'junegunn/gv.vim'
+
 " color hexacode colors
 " Plug 'norcalli/nvim-colorizer.lua'
 
