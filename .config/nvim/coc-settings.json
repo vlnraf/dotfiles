@@ -27,5 +27,8 @@
             "open"
         ],
         "v": "open:vsplit"
-    }
+    },
+    "coc.source.emoji.filetypes": [
+        "markdown"
+    ]
 }

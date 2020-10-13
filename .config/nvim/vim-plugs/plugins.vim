@@ -34,7 +34,7 @@ Plug 'junegunn/gv.vim'
 " MarkDown Preview
 " If you don't have nodejs and yarn
 " use pre build
-" Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() } }
+ Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() } }
 
 " set dev-icons
 " Plug 'ryanoasis/vim-devicons'
