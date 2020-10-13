@@ -1,8 +1,11 @@
 # dotfiles
 
 terminal: alacritty
+
 wm: i3 (trying to switch to xmonad)
+
 editor: neovim
+
 file manager: ranger-thunar
 
 
