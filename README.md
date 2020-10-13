@@ -9,6 +9,31 @@ editor: neovim
 file manager: ranger-thunar
 
 
+### Before use neovim
+
+[Coc-vim](https://github.com/neoclide/coc.nvim)
+
+and see other plugin pages to just look the dependencies
+
+### Use this bash file to install coc-extensions
+```
+#!/usr/bin/bash
+
+set -o nounset    # error when referencing undefined variable
+set -o errexit    # exit when command fails
+
+# Install extensions
+mkdir -p ~/.config/coc/extensions
+cd ~/.config/coc/extensions
+if [ ! -f package.json ]
+then
+  echo '{"dependencies":{}}'> package.json
+fi
+
+npm install coc-snippets coc-python coc-tsserver coc-json coc-highlight coc-explorer coc-emoji coc-vimlsp --global-style --ignore-scripts --no-bin-links --no-package-lock --only=prod
+```
+
+
 # Good Resources
 
 how change Time Zone in linux: [timezone](https://phoenixnap.com/kb/how-to-set-or-change-timezone-date-time-ubuntu)
