@@ -5,6 +5,7 @@ Plug 'neoclide/coc.nvim', {'do': 'yarn install --frozen-lockfile'}
 
 "Colorscheme (includes its own airline theme)
 Plug 'morhetz/gruvbox'
+Plug 'joshdick/onedark.vim'
 
 "Plugin per parentesi aperte e chiuse
 Plug 'raimondi/delimitmate'
@@ -36,11 +37,3 @@ Plug 'vim-airline/vim-airline-themes'
 " Plug 'numirias/semshi', {'do': ':UpdateRemotePlugins'}
 
 call plug#end()
-
-colorscheme gruvbox
-set background=dark
-
-if (has("nvim"))
-  "For Neovim 0.1.3 and 0.1.4 < https://github.com/neovim/neovim/pull/2198 >
-  let $NVIM_TUI_ENABLE_TRUE_COLOR=1
-endif
