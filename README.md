@@ -13,7 +13,7 @@ file manager: ranger-thunar
 
 [Coc-vim](https://github.com/neoclide/coc.nvim)
 
-and see other plugin pages to just look the dependencies
+**and see other plugin pages to just look the dependencies**
 
 ### Use this bash file to install coc-extensions
 ```
