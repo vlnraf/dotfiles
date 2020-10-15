@@ -28,7 +28,7 @@ Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-rhubarb'
 Plug 'junegunn/gv.vim'
 
-Plug 'mhinz/vim-startify'
+" Plug 'mhinz/vim-startify'
 
 " color hexacode colors
 " Plug 'norcalli/nvim-colorizer.lua'
