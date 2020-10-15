@@ -1,5 +1,6 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhistcnt =6
+let g:netrw_dirhistcnt =7
+let g:netrw_dirhist_7='/home/raffaele/.config/alacritty'
 let g:netrw_dirhist_6='/home/raffaele/.config/nvim/plug-config'
 let g:netrw_dirhist_5='/home/raffaele'
 let g:netrw_dirhist_4='/home'
@@ -9,4 +10,3 @@ let g:netrw_dirhist_1='/home/raffaele'
 let g:netrw_dirhist_0='/home/raffaele/.screenlayout'
 let g:netrw_dirhist_9='/home/raffaele'
 let g:netrw_dirhist_8='/home/raffaele/.i3'
-let g:netrw_dirhist_7='/etc/X11/xorg.conf.d'
