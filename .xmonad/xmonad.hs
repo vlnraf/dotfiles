@@ -111,6 +111,7 @@ myStartupHook = do
           spawnOnce "nm-applet &"
           spawnOnce "volumeicon &"
           spawnOnce "trayer --edge top --align right --widthtype request --padding 6 --SetDockType true --SetPartialStrut true --expand true --monitor 0 --transparent true --alpha 0 --tint 0x282c34  --height 22 &"
+          spawnOnce "/home/raffaele/.screenlayout/screen.sh"
           -- spawnOnce "/usr/bin/emacs --daemon &"
           spawnOnce "kak -d -s mysession &"
           setWMName "LG3D"
@@ -395,9 +396,9 @@ myKeys =
 main :: IO ()
 main = do
     -- Launching three instances of xmobar on their monitors.
-    xmproc0 <- spawnPipe "xmobar /home/raffaele/.config/xmobar/xmobarrc0"
-    -- xmproc1 <- spawnPipe "xmobar -x 1 /home/dt/.config/xmobar/xmobarrc2"
-    -- xmproc2 <- spawnPipe "xmobar -x 2 /home/dt/.config/xmobar/xmobarrc1"
+    xmproc0 <- spawnPipe "xmobar -x0 /home/raffaele/.config/xmobar/xmobarrc0"
+    xmproc1 <- spawnPipe "xmobar -x1 /home/raffaele/.config/xmobar/xmobarrc1"
+    -- xmproc2 <- spawnPipe "xmobar -x 2 /home/raffaele/.config/xmobar/xmobarrc2"
     -- the xmonad, ya know...what the WM is named after!
     xmonad $ ewmh def
         { manageHook = ( isFullscreen --> doFullFloat ) <+> myManageHook <+> manageDocks
@@ -419,7 +420,8 @@ main = do
         , focusedBorderColor = myFocusColor
         , logHook = workspaceHistoryHook <+> myLogHook <+> dynamicLogWithPP xmobarPP
                         { -- ppOutput = \x -> hPutStrLn xmproc0 x  >> hPutStrLn xmproc1 x  >> hPutStrLn xmproc2 x
-                        ppOutput = \x -> hPutStrLn xmproc0 x 
+                        ppOutput = \x -> hPutStrLn xmproc0 x >> hPutStrLn xmproc1 x
+
                         , ppCurrent = xmobarColor "#98be65" "" . wrap "[" "]" -- Current workspace in xmobar
                         , ppVisible = xmobarColor "#98be65" ""                -- Visible but not current workspace
                         , ppHidden = xmobarColor "#82AAFF" "" . wrap "*" ""   -- Hidden workspaces in xmobar
