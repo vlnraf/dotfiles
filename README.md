@@ -45,5 +45,6 @@ use layoutscreen to restore multi monitor screen (it's the same script in layout
 > - how to manage git with github, add shh key to github: [ssh2](https://docs.github.com/en/github/authenticating-to-github/adding-a-new-ssh-key-to-your-github-account)    
 > - add a composite key to have accents with US layout: [US keyboard](https://bbs.archlinux.org/viewtopic.php?id=164150)    
 > - good vim blogger: [Vim Blogger](https://www.chrisatmachine.com/)    
+> - How to set emoji in alacritty terminal: [alacritty emoji](https://github.com/alacritty/alacritty/issues/153)    
 
 
