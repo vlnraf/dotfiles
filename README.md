@@ -33,6 +33,8 @@ fi
 npm install coc-snippets coc-python coc-tsserver coc-json coc-highlight coc-explorer coc-emoji coc-vimlsp --global-style --ignore-scripts --no-bin-links --no-package-lock --only=prod
 ```
 
+use layoutscreen to restore multi monitor screen (it's the same script in layoutscreen/screen.sh but renamed and stored in /usr/bin/)
+
 
 # Good Resources
 
