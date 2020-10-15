@@ -1,13 +1,13 @@
 # dotfiles
 
-terminal: alacritty
+- terminal: alacritty
 
-wm: i3 (trying to switch to xmonad)
+- wm: i3 (trying to switch to xmonad)
 
-editor: neovim
+- editor: neovim
 
-file manager: ranger-thunar
-
+- file manager: ranger-thunar
+Medium
 
 ### Before use neovim
 
