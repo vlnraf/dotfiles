@@ -51,6 +51,8 @@ import XMonad.Layout.NoBorders
 import XMonad.Layout.Renamed (renamed, Rename(Replace))
 import XMonad.Layout.ShowWName
 import XMonad.Layout.Spacing
+import XMonad.Layout.SubLayouts
+import XMonad.Layout.WindowNavigation
 import XMonad.Layout.WindowArranger (windowArrange, WindowArrangerMsg(..))
 import qualified XMonad.Layout.ToggleLayouts as T (toggleLayouts, ToggleLayout(Toggle))
 import qualified XMonad.Layout.MultiToggle as MT (Toggle(..))
@@ -151,6 +153,7 @@ myAppGrid = [
                  , ("Gimp", "gimp")
                  , ("OBS", "obs")
                  , ("PCManFM", "pcmanfm")
+                 , ("Spotify", "spotify")
                  ]
                  
 myScratchPads :: [NamedScratchpad]
@@ -188,6 +191,11 @@ tall     = renamed [Replace "tall"]
            $ limitWindows 12
            $ mySpacing 8
            $ ResizableTall 1 (3/100) (1/2) []
+mirror     = renamed [Replace "mirror"]
+           $ limitWindows 12
+           $ mySpacing 8
+           $ Mirror
+           $ ResizableTall 1 (3/100) (1/2) []
 magnify  = renamed [Replace "magnify"]
            $ magnifier
            $ limitWindows 12
@@ -207,8 +215,8 @@ spirals  = renamed [Replace "spirals"]
            $ spiral (6/7)
 threeCol = renamed [Replace "threeCol"]
            $ limitWindows 7
-           $ mySpacing' 4
-           $ ThreeCol 1 (3/100) (1/2)
+           $ mySpacing 4
+           $ ThreeColMid 1 (1/100) (1/2)
 threeRow = renamed [Replace "threeRow"]
            $ limitWindows 7
            $ mySpacing' 4
@@ -245,6 +253,7 @@ myLayoutHook = avoidStruts $ mouseResize $ windowArrange $ T.toggleLayouts float
              where
                -- I've commented out the layouts I don't use.
                myDefaultLayout =     tall
+                                 -- ||| mirror
                                  ||| magnify
                                  ||| noBorders monocle
                                  ||| floats
@@ -275,7 +284,6 @@ myManageHook = composeAll
      -- I'm doing it this way because otherwise I would have to write out
      -- the full name of my workspaces.
      [ className =? "Spotify"     --> doShift ( myWorkspaces !! 6 )
-     , className =? "Chromium"     --> doShift ( myWorkspaces !! 1 )
      , className =? "mpv"     --> doShift ( myWorkspaces !! 7 )
      -- , className =? "vlc"     --> doShift ( myWorkspaces !! 7 )
      , className =? "Gimp"    --> doShift ( myWorkspaces !! 8 )
@@ -329,15 +337,14 @@ myKeys =
         , ("M-S-k", windows W.swapUp)        -- Swap focused window with prev window
         , ("M-p", promote)         -- Moves focused window to master, others maintain order
         , ("M-d", spawn "dmenu_recency")         -- Moves focused window to master, others maintain order
-        , ("M1-S-<Tab>", rotSlavesDown)      -- Rotate all windows except master and keep focus in place
         , ("M1-C-<Tab>", rotAllDown)         -- Rotate all the windows in the current stack
         --, ("M-S-s", windows copyToAll)
         , ("M-C-s", killAllOtherCopies)
 
         -- Layouts
-        , ("M-<Tab>", sendMessage NextLayout)                -- Switch to next layout
-        , ("M-C-M1-<Up>", sendMessage Arrange)
-        , ("M-C-M1-<Down>", sendMessage DeArrange)
+        , ("M-<Tab>", sendMessage NextLayout)               -- Switch to next layout
+        , ("M-S-<Tab>", sendMessage FirstLayout)            -- Switch to previous layout
+        -- , ("M-C-<Tab>", toSubl NextLayout)     -- Switch the sub layouts
         , ("M-<Space>", sendMessage (MT.Toggle NBFULL) >> sendMessage ToggleStruts) -- Toggles noborder/full
         , ("M-S-<Space>", sendMessage ToggleStruts)         -- Toggles struts
         , ("M-S-n", sendMessage $ MT.Toggle NOBORDERS)      -- Toggles noborder
