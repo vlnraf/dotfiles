@@ -46,7 +46,7 @@ use layoutscreen to restore multi monitor screen (it's the same script in layout
 > - good vim blogger: [Vim Blogger](https://www.chrisatmachine.com/)    
 > - How to set emoji in alacritty terminal: [alacritty emoji](https://github.com/alacritty/alacritty/issues/153)    
 > - add a composite key to have accents with US layout: [US keyboard](https://bbs.archlinux.org/viewtopic.php?id=164150)    
-    > - set the compose key in the file /etc/default/keyboard like here [comp](https://askubuntu.com/questions/121474/permanently-change-keyboard-layout)
+    > - set the compose key in the file /etc/default/keyboard like here [comp](https://askubuntu.com/questions/121474/permanently-change-keyboard-layout)  
     > - or like here [comp](https://www.reddit.com/r/linux4noobs/comments/890gxm/making_the_compose_key_permanent/)
 
 
