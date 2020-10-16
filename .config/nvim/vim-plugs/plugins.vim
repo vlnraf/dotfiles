@@ -28,6 +28,11 @@ Plug 'tpope/vim-fugitive'
 Plug 'tpope/vim-rhubarb'
 Plug 'junegunn/gv.vim'
 
+Plug 'mbbill/undotree'
+
+" Plug 'neovim/nvim-lspconfig'
+" Plug 'nvim-lua/completion-nvim'
+
 " Plug 'mhinz/vim-startify'
 
 " color hexacode colors

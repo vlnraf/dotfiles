@@ -1,12 +1,12 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhistcnt =7
+let g:netrw_dirhistcnt =1
+let g:netrw_dirhist_1='/home/raffaele/.config/nvim/vim-plugs'
+let g:netrw_dirhist_0='/home/raffaele/.config/nvim'
+let g:netrw_dirhist_9='/home/raffaele/Documents/ml-project/neuralnet'
+let g:netrw_dirhist_8='/home/raffaele/Documents/ml-project'
 let g:netrw_dirhist_7='/home/raffaele/.config/alacritty'
 let g:netrw_dirhist_6='/home/raffaele/.config/nvim/plug-config'
 let g:netrw_dirhist_5='/home/raffaele'
 let g:netrw_dirhist_4='/home'
 let g:netrw_dirhist_3='/home/raffaele'
 let g:netrw_dirhist_2='/home/raffaele/.cache'
-let g:netrw_dirhist_1='/home/raffaele'
-let g:netrw_dirhist_0='/home/raffaele/.screenlayout'
-let g:netrw_dirhist_9='/home/raffaele'
-let g:netrw_dirhist_8='/home/raffaele/.i3'
