@@ -68,7 +68,7 @@ ZSH_THEME="robbyrussell"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git)
+plugins=(zsh-autosuggestions)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -104,9 +104,20 @@ alias oldvim="vim"
 alias protege='/opt/Protege-5.5.0/run.sh'
 alias config='/usr/bin/git --git-dir=$HOME/dotfiles/ --work-tree=/home/raffaele'
 export EDITOR="nvim"
+# export TERM="alacritty"
 
 # eval $(ssh-agent)
 # ssh-add ~/.ssh/id_rsa
 eval `keychain --eval --nogui -Q -q id_rsa`
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+# set dual monitors
+dual () {
+    xrandr --output DisplayPort-0 --primary --mode 1920x1080 --rate 144.00 --pos 1920x0 --rotate normal --output HDMI-0 --mode 1920x1080 --pos 0x0 --rotate normal --output DVI-0 --off --output DVI-1 --off
+}
+
+# set single monitor
+single () {
+    xrandr --output HDMI-0 --off
+}
