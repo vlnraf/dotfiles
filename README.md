@@ -16,6 +16,7 @@ Medium
 **and see other plugin pages to just look the dependencies**
 
 ### Use this bash file to install coc-extensions
+
 ```bash
 #!/usr/bin/bash
 

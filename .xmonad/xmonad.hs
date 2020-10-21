@@ -82,6 +82,7 @@ myModMask = mod4Mask       -- Sets modkey to super/windows key
 
 myTerminal :: String
 myTerminal = "alacritty -e tmux"   -- Sets default terminal
+-- myTerminal = "alacritty"   -- Sets default terminal
 
 myBrowser :: String
 myBrowser = "qutebrowser "               -- Sets qutebrowser as browser for tree select
@@ -290,7 +291,8 @@ myManageHook = composeAll
      , className =? "Gimp"    --> doFloat
      , title =? "Oracle VM VirtualBox Manager"     --> doFloat
      , className =? "VirtualBox Manager" --> doShift  ( myWorkspaces !! 4 )
-     , (className =? "Chromium" <&&> resource =? "Toolkit") --> doFloat  -- Float Firefox Dialog
+     , (className =? "Firefox" <&&> resource =? "Dialog") --> doFloat  -- Float Firefox Dialog
+     , (className =? "Chromium" <&&> resource =? "Toolkit") --> doFloat  -- Float Chromium toolkit
      ] <+> namedScratchpadManageHook myScratchPads
 
 myLogHook :: X ()
@@ -311,8 +313,8 @@ myKeys =
         -- , ("M-S-<Return>", shellPrompt dtXPConfig)   -- Shell Prompt
 
     -- Windows
-        , ("M-<Backspace>", kill1)                           -- Kill the currently focused client
-        , ("M-S-<Backspace>", killAll)                         -- Kill all windows on current workspace
+        , ("M-x", kill1)                           -- Kill the currently focused client
+        , ("M-S-x", killAll)                         -- Kill all windows on current workspace
 
     -- Floating windows
         , ("M-f", sendMessage (T.Toggle "floats"))       -- Toggles my 'floats' layout
@@ -370,7 +372,7 @@ myKeys =
 
     --- My Applications (Super+Alt+Key)
         , ("M-M1-a", spawn (myTerminal ++ " -e ncpamixer"))
-        , ("M-M1-b", spawn "chromium")
+        , ("M-b", spawn "default_browser")
         , ("M-M1-s", spawn "spotify")
         , ("M-M1-t", spawn "teams")
 
@@ -381,8 +383,6 @@ myKeys =
         -- , ("<XF86AudioMute>",   spawn "amixer set Master toggle")  -- Bug prevents it from toggling correctly in 12.04.
         , ("<XF86AudioLowerVolume>", spawn "amixer set Master 5%- unmute")
         , ("<XF86AudioRaiseVolume>", spawn "amixer set Master 5%+ unmute")
-        , ("<XF86HomePage>", spawn "firefox")
-        , ("<XF86Search>", safeSpawn "firefox" ["https://www.google.com/"])
         , ("<XF86Mail>", runOrRaise "geary" (resource =? "thunderbird"))
         , ("<XF86Calculator>", runOrRaise "gcalctool" (resource =? "gcalctool"))
         , ("<XF86Eject>", spawn "toggleeject")
