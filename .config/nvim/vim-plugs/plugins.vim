@@ -30,6 +30,11 @@ Plug 'junegunn/gv.vim'
 
 Plug 'mbbill/undotree'
 
+" MarkDown Preview
+" If you don't have nodejs and yarn
+" use pre build
+Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() } }
+
 " Plug 'neovim/nvim-lspconfig'
 " Plug 'nvim-lua/completion-nvim'
 
@@ -37,11 +42,6 @@ Plug 'mbbill/undotree'
 
 " color hexacode colors
 " Plug 'norcalli/nvim-colorizer.lua'
-
-" MarkDown Preview
-" If you don't have nodejs and yarn
-" use pre build
- Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() } }
 
 " set dev-icons
 " Plug 'ryanoasis/vim-devicons'

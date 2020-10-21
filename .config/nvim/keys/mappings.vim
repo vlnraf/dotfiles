@@ -45,4 +45,4 @@ inoremap {<CR> {<CR>}<Esc>ko
 inoremap [<CR> [<CR>]<Esc>ko
 inoremap (<CR> (<CR>)<Esc>ko
 
-
+nnoremap <F5> :UndotreeToggle<cr>
