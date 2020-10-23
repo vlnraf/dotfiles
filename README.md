@@ -9,11 +9,11 @@
 - file manager: ranger-thunar
 Medium
 
-### Before use neovim
+### Before use neovim with this config
 
 [Coc-vim](https://github.com/neoclide/coc.nvim)
 
-**and see other plugin pages to just look the dependencies**
+**and see other plugin pages and give a look at the dependencies**
 
 ### Use this bash file to install coc-extensions
 
