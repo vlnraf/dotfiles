@@ -114,7 +114,7 @@ myStartupHook = do
           spawnOnce "nm-applet &"
           spawnOnce "volumeicon &"
           spawnOnce "trayer --edge top --align right --widthtype request --padding 6 --SetDockType true --SetPartialStrut true --expand true --monitor 0 --transparent true --alpha 0 --tint 0x282c34  --height 22 &"
-          spawnOnce "/home/raffaele/.screenlayout/screen.sh"
+          spawnOnce "/home/raffaele/.screenlayout/screen.sh" --xrandr script for 2 monitors
           -- spawnOnce "/usr/bin/emacs --daemon &"
           spawnOnce "kak -d -s mysession &"
           setWMName "LG3D"
@@ -284,14 +284,15 @@ myManageHook = composeAll
      -- using 'doShift ( myWorkspaces !! 7)' sends program to workspace 8!
      -- I'm doing it this way because otherwise I would have to write out
      -- the full name of my workspaces.
-     [ className =? "Spotify"     --> doShift ( myWorkspaces !! 6 )
-     , className =? "mpv"     --> doShift ( myWorkspaces !! 7 )
      -- , className =? "vlc"     --> doShift ( myWorkspaces !! 7 )
-     , className =? "Gimp"    --> doShift ( myWorkspaces !! 8 )
+     [ className =? "Gimp"    --> doShift ( myWorkspaces !! 8 )
      , className =? "Gimp"    --> doFloat
+     , className =? "Manjaro Settings Manager"    --> doFloat
+     , className =? "Spotify"    --> doShift ( myWorkspaces !! 6 )
      , title =? "Oracle VM VirtualBox Manager"     --> doFloat
      , className =? "VirtualBox Manager" --> doShift  ( myWorkspaces !! 4 )
      , (className =? "Firefox" <&&> resource =? "Dialog") --> doFloat  -- Float Firefox Dialog
+     , (className =? "Firefox" <&&> resource =? "Toolkit") --> doFloat  -- Float Firefox toolkit
      , (className =? "Chromium" <&&> resource =? "Toolkit") --> doFloat  -- Float Chromium toolkit
      ] <+> namedScratchpadManageHook myScratchPads
 
