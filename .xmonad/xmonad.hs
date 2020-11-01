@@ -155,6 +155,8 @@ myAppGrid = [
                  , ("OBS", "obs")
                  , ("PCManFM", "pcmanfm")
                  , ("Spotify", "spotify")
+                 , ("Teams", "teams")
+                 , ("Telegram", "telegram-desktop")
                  ]
                  
 myScratchPads :: [NamedScratchpad]
