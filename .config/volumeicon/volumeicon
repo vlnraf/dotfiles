@@ -1,6 +1,5 @@
-[Pulse]
+[Alsa]
 card=default
-channel=Master
 
 [Notification]
 show_notification=true
@@ -8,7 +7,7 @@ notification_type=1
 
 [StatusIcon]
 stepsize=5
-onclick= pavucontrol
+onclick=pavucontrol
 theme=White Gnome
 use_panel_specific_icons=true
 lmb_slider=true
