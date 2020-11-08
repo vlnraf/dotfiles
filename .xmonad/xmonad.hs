@@ -293,8 +293,9 @@ myManageHook = composeAll
      , className =? "Spotify"    --> doShift ( myWorkspaces !! 6 )
      , title =? "Oracle VM VirtualBox Manager"     --> doFloat
      , className =? "VirtualBox Manager" --> doShift  ( myWorkspaces !! 4 )
-     , (className =? "Firefox" <&&> resource =? "Dialog") --> doFloat  -- Float Firefox Dialog
-     , (className =? "Firefox" <&&> resource =? "Toolkit") --> doFloat  -- Float Firefox toolkit
+     , title =? "Volume Control"     --> doFloat   -- Float pavucontrol application
+     , (className =? "firefox" <&&> resource =? "Dialog") --> doFloat  -- Float Firefox Dialog
+     , (className =? "firefox" <&&> resource =? "Toolkit") --> doFloat  -- Float Firefox toolkit
      , (className =? "Chromium" <&&> resource =? "Toolkit") --> doFloat  -- Float Chromium toolkit
      ] <+> namedScratchpadManageHook myScratchPads
 
