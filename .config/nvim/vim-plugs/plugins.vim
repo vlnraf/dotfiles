@@ -8,7 +8,7 @@ Plug 'morhetz/gruvbox'
 Plug 'joshdick/onedark.vim'
 
 "Plugin per parentesi aperte e chiuse
-Plug 'raimondi/delimitmate'
+"Plug 'raimondi/delimitmate'
 
 "plugin per modificare velocemente
 Plug 'tpope/vim-surround'
@@ -34,19 +34,5 @@ Plug 'mbbill/undotree'
 " If you don't have nodejs and yarn
 " use pre build
 Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() } }
-
-" Plug 'neovim/nvim-lspconfig'
-" Plug 'nvim-lua/completion-nvim'
-
-" Plug 'mhinz/vim-startify'
-
-" color hexacode colors
-" Plug 'norcalli/nvim-colorizer.lua'
-
-" set dev-icons
-" Plug 'ryanoasis/vim-devicons'
-
-" python highlighter
-" Plug 'numirias/semshi', {'do': ':UpdateRemotePlugins'}
 
 call plug#end()

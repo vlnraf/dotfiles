@@ -7,3 +7,5 @@ source $HOME/.config/nvim/plug-config/coc.vim
 source $HOME/.config/nvim/plug-config/fzf.vim
 source $HOME/.config/nvim/plug-config/signify.vim
 " source $HOME/.config/nvim/plug-config/completion.vim
+
+:autocmd BufNewFile *.cpp 0r ~/.vim/templates/skeleton.cpp

@@ -41,8 +41,8 @@ ino <Left> <Nop>
 ino <Right> <Nop>
 
 "Auto parenthesis indentation
-inoremap {<CR> {<CR>}<Esc>ko
-inoremap [<CR> [<CR>]<Esc>ko
-inoremap (<CR> (<CR>)<Esc>ko
+" inoremap {<CR> {<CR>}<Esc>ko
+" inoremap [<CR> [<CR>]<Esc>ko
+" inoremap (<CR> (<CR>)<Esc>ko
 
 nnoremap <F5> :UndotreeToggle<cr>
