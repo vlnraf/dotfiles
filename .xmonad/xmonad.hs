@@ -101,8 +101,8 @@ myNormColor   = "#282c34"  -- Border color of normal windows
 myFocusColor :: String
 myFocusColor  = "#bbc5ff"  -- Border color of focused windows
 
-altMask :: KeyMask
-altMask = mod1Mask         -- Setting this for use in xprompts
+-- altMask :: KeyMask
+-- altMask = mod1Mask         -- Setting this for use in xprompts
 
 windowCount :: X (Maybe String)
 windowCount = gets $ Just . show . length . W.integrate' . W.stack . W.workspace . W.current . windowset
@@ -116,7 +116,7 @@ myStartupHook = do
           spawnOnce "trayer --edge top --align right --widthtype request --padding 6 --SetDockType true --SetPartialStrut true --expand true --monitor 0 --transparent true --alpha 0 --tint 0x282c34  --height 22 &"
           spawnOnce "/home/raffaele/.screenlayout/screen.sh" --xrandr script for 2 monitors
           -- spawnOnce "/usr/bin/emacs --daemon &"
-          spawnOnce "kak -d -s mysession &"
+          -- spawnOnce "kak -d -s mysession &"
           setWMName "LG3D"
 
 myColorizer :: Window -> Bool -> X (String, String)
@@ -150,7 +150,7 @@ spawnSelected' lst = gridselect conf lst >>= flip whenJust spawn
                    }
 
 myAppGrid = [
-                 ("Chromium", "chromium")
+                 ("Firefox", "firefox")
                  , ("Gimp", "gimp")
                  , ("OBS", "obs")
                  , ("PCManFM", "pcmanfm")
@@ -337,11 +337,11 @@ myKeys =
         , ("M-m", windows W.focusMaster)     -- Move focus to the master window
         , ("M-j", windows W.focusDown)       -- Move focus to the next window
         , ("M-k", windows W.focusUp)         -- Move focus to the prev window
-        --, ("M-S-m", windows W.swapMaster)    -- Swap the focused window and the master window
+        , ("M-S-m", windows W.swapMaster)    -- Swap the focused window and the master window
         , ("M-S-j", windows W.swapDown)      -- Swap focused window with next window
         , ("M-S-k", windows W.swapUp)        -- Swap focused window with prev window
         , ("M-p", promote)         -- Moves focused window to master, others maintain order
-        , ("M-d", spawn "dmenu_recency")         -- Moves focused window to master, others maintain order
+        , ("M-d", spawn "dmenu_recency")         -- Spawn Dmenu
         , ("M1-C-<Tab>", rotAllDown)         -- Rotate all the windows in the current stack
         --, ("M-S-s", windows copyToAll)
         , ("M-C-s", killAllOtherCopies)
