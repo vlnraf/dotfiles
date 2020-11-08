@@ -1,4 +1,4 @@
-[Alsa]
+[Pulse]
 card=default
 channel=Master
 
@@ -8,7 +8,7 @@ notification_type=1
 
 [StatusIcon]
 stepsize=5
-onclick=alacritty -e 'alsamixer'
+onclick= pavucontrol
 theme=White Gnome
 use_panel_specific_icons=true
 lmb_slider=true
