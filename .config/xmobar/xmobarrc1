@@ -17,7 +17,7 @@ Config { font    = "xft:Ubuntu:weight=bold:pixelsize=11:antialias=true:hinting=t
        , iconRoot = "/home/raffaele/.xmonad/xpm/"  -- default: "."
        , commands = [ 
                       -- Time and date
-                      Run Date "<fn=3>\xf133</fn> %b %d %Y (%H:%M)" "date" 50
+                      Run Date "<fn=3>\xf073</fn> %b %d %Y (%H:%M)" "date" 50
                       -- Network up and down
                     , Run Network "enp3s0" ["-t", "<fn=3>\xf0ab</fn> <rx>kb  <fn=3>\xf0aa</fn> <tx>kb"] 20
                       -- Cpu usage in percent
