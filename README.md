@@ -1,11 +1,9 @@
 # Dotfiles
----
 
 Hi to everyone. 
 Welcome to my xmonad setup!
 
 ## Configuration
----
 
 |Name              |                                                            |
 |------------------|------------------------------------------------------------|
@@ -18,14 +16,12 @@ Welcome to my xmonad setup!
 |Browser           |[Firefox](https://www.mozilla.org/en-US/firefox/new/)       | 
 
 ### Before use neovim with this config
----
 
 [Coc-vim](https://github.com/neoclide/coc.nvim)
 
 **and see other plugin pages and give a look at the dependencies**
 
 ### Use this bash file to install coc-extensions
----
 
 ```bash
 #!/usr/bin/bash
@@ -47,13 +43,11 @@ npm install coc-snippets coc-python coc-tsserver coc-json coc-highlight coc-expl
 use [`dual`](https://github.com/vlnraf/dotfiles/blob/master/.zshrc) or [`single`](https://github.com/vlnraf/dotfiles/blob/master/.zshrc) in the terminal to switch from the single monitor to double monitor or the other way.
 
 ### TODO
----
 
 - I will try to do a bash script to install everything automatically and start the same config in another machine as soon as possible. (When i have a bit of time to work on it 😅)
 - Try to switch from dmenu to Rofi app launcher.
 
 ### Here are a few screenshots
----
 
 ![Sysinfo](./Pictures/screenshots/2020-11-09_18-03.png?raw=true "System Info")
 ![Work](./Pictures/screenshots/2020-11-09_14-08.png?raw=true "Work Flow")
@@ -62,7 +56,6 @@ use [`dual`](https://github.com/vlnraf/dotfiles/blob/master/.zshrc) or [`single`
 ![Double](./Pictures/screenshots/2020-11-09_17-18.png?raw=true "Double Monitor")
 
 > ### Good Resources
----
 > 
 > - how change Time Zone in linux: [timezone](https://phoenixnap.com/kb/how-to-set-or-change-timezone-date-time-ubuntu)   
 > - [video] how to manage your dotfiles and save it on github: [dotfiles](https://www.youtube.com/watch?v=awtfkl50bUQ&ab_channel=ElliotJackson)    
