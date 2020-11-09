@@ -1,13 +1,15 @@
 # dotfiles
 
-- terminal: alacritty
-
-- wm: i3 (trying to switch to xmonad)
-
-- editor: neovim
-
-- file manager: ranger-thunar
-Medium
+## Configuration
+|Name              |                                                            |
+|------------------|------------------------------------------------------------|
+|OS                |[Manjaro](https://manjaro.org/)                             |
+|Shell             |[ZSH + ohmyzsh](https://ohmyz.sh/)                          |
+|Window Manager    |[Xmonad](https://xmonad.org/)                               |
+|Terminal          |[Alacritty](https://github.com/alacritty/alacritty)         |
+|Editor            |[Neovim](https://neovim.io/)                                |
+|Panel             |[Xmobar](https://xmobar.org/)                               |
+|Browser           |[Firefox](https://www.mozilla.org/en-US/firefox/new/)       | 
 
 ### Before use neovim with this config
 
@@ -34,8 +36,15 @@ fi
 npm install coc-snippets coc-python coc-tsserver coc-json coc-highlight coc-explorer coc-emoji coc-vimlsp --global-style --ignore-scripts --no-bin-links --no-package-lock --only=prod
 ```
 
-use layoutscreen to restore multi monitor screen (it's the same script in layoutscreen/screen.sh but renamed and stored in /usr/bin/)
+use layoutscreen to switch from multimonito to single monitor (it's the same script in [`screenlalyout](https://github.com/vlnraf/dotfiles/tree/master/.screenlayout) stored in /usr/bin/ to use it faster from command line)
 
+### Here are a few screenshots
+![Wall](./Pictures/screenshots/2020-11-09_13-07.png?raw=true "Wallpaper")
+![Sysinfo](./Pictures/screenshots/2020-11-09_18-03.png?raw=true "System Info")
+![Work](./Pictures/screenshots/2020-11-09_14-08.png?raw=true "Work Flow")
+![Files](./Pictures/screenshots/2020-11-09_17-18_1.png?raw=true "File Managers")
+![Browser](./Pictures/screenshots/2020-11-09_17-23.png?raw=true "Browser")
+![Double](./Pictures/screenshots/2020-11-09_17-18.png?raw=true "Double Monitor")
 
 > ### Good Resources
 > 
