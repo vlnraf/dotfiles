@@ -36,10 +36,9 @@ fi
 npm install coc-snippets coc-python coc-tsserver coc-json coc-highlight coc-explorer coc-emoji coc-vimlsp --global-style --ignore-scripts --no-bin-links --no-package-lock --only=prod
 ```
 
-use layoutscreen to switch from multimonito to single monitor (it's the same script in [`screenlalyout](https://github.com/vlnraf/dotfiles/tree/master/.screenlayout) stored in /usr/bin/ to use it faster from command line)
+use [dual](https://github.com/vlnraf/dotfiles/blob/master/.zshrc) [single](https://github.com/vlnraf/dotfiles/blob/master/.zshrc) in the terminal to switch from the single monitor to double monitor or the other way.
 
 ### Here are a few screenshots
-![Wall](./Pictures/screenshots/2020-11-09_13-07.png?raw=true "Wallpaper")
 ![Sysinfo](./Pictures/screenshots/2020-11-09_18-03.png?raw=true "System Info")
 ![Work](./Pictures/screenshots/2020-11-09_14-08.png?raw=true "Work Flow")
 ![Files](./Pictures/screenshots/2020-11-09_17-18_1.png?raw=true "File Managers")
@@ -60,3 +59,4 @@ use layoutscreen to switch from multimonito to single monitor (it's the same scr
 >    - or like here [comp](https://www.reddit.com/r/linux4noobs/comments/890gxm/making_the_compose_key_permanent/)
 
 
+A special thanks to [DistroTube](https://distrotube.com/) that give me the opportunity to take his dotfiles as an example.
