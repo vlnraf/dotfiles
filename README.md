@@ -36,7 +36,12 @@ fi
 npm install coc-snippets coc-python coc-tsserver coc-json coc-highlight coc-explorer coc-emoji coc-vimlsp --global-style --ignore-scripts --no-bin-links --no-package-lock --only=prod
 ```
 
-use [dual](https://github.com/vlnraf/dotfiles/blob/master/.zshrc) [single](https://github.com/vlnraf/dotfiles/blob/master/.zshrc) in the terminal to switch from the single monitor to double monitor or the other way.
+use [`dual`](https://github.com/vlnraf/dotfiles/blob/master/.zshrc) or [`single`](https://github.com/vlnraf/dotfiles/blob/master/.zshrc) in the terminal to switch from the single monitor to double monitor or the other way.
+
+### TODO
+
+- I will try to do a bash script to install everything automatically and start the same config in another machine as soon as possible. (When i have a bit of time to work on it 😅)
+- Try to switch from dmenu to Rofi app launcher.
 
 ### Here are a few screenshots
 ![Sysinfo](./Pictures/screenshots/2020-11-09_18-03.png?raw=true "System Info")
