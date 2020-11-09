@@ -69,4 +69,4 @@ use [`dual`](https://github.com/vlnraf/dotfiles/blob/master/.zshrc) or [`single`
 >    - or like here [comp](https://www.reddit.com/r/linux4noobs/comments/890gxm/making_the_compose_key_permanent/)
 
 
-A special thanks to [DistroTube](https://distrotube.com/) that give me the opportunity to take his dotfiles as an example.
+A special thanks to [DistroTube](https://distrotube.com/) from which i took inspiration.
