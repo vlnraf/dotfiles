@@ -294,7 +294,7 @@ myManageHook = composeAll
      , title =? "Oracle VM VirtualBox Manager"     --> doFloat
      , className =? "VirtualBox Manager" --> doShift  ( myWorkspaces !! 4 )
      , title =? "Volume Control"     --> doFloat   -- Float pavucontrol application
-     , title =? "mpv"     --> doFloat   -- Float mpv application
+     , className =? "mpv"     --> doFloat   -- Float mpv application
      , (className =? "firefox" <&&> resource =? "Dialog") --> doFloat  -- Float Firefox Dialog
      , (className =? "firefox" <&&> resource =? "Toolkit") --> doFloat  -- Float Firefox toolkit
      , (className =? "Chromium" <&&> resource =? "Toolkit") --> doFloat  -- Float Chromium toolkit

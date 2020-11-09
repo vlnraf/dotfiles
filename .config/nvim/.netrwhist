@@ -1,5 +1,6 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhistcnt =5
+let g:netrw_dirhistcnt =6
+let g:netrw_dirhist_6='/home/raffaele/Documents/vlnraf'
 let g:netrw_dirhist_5='/home/raffaele/.config/nvim/vim-plugs'
 let g:netrw_dirhist_4='/home/raffaele/Documents/ml-project/.git'
 let g:netrw_dirhist_3='/home/raffaele/Documents/ml-project/wavegrad'
@@ -9,4 +10,3 @@ let g:netrw_dirhist_0='/home/raffaele/Documents/ml-project'
 let g:netrw_dirhist_9='/home/raffaele/Documents/site'
 let g:netrw_dirhist_8='/home/raffaele/Documents/site/personal'
 let g:netrw_dirhist_7='/home/raffaele/Documents/site'
-let g:netrw_dirhist_6='/home/raffaele/Documents'
