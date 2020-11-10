@@ -11,7 +11,7 @@ Welcome to my xmonad setup!
 |Shell             |[ZSH + ohmyzsh](https://ohmyz.sh/)                          |
 |Window Manager    |[Xmonad](https://xmonad.org/)                               |
 |Terminal          |[Alacritty](https://github.com/alacritty/alacritty)         |
-|Editor            |[Neovim](https://neovim.io/)                                |
+|Editor            |[Neovim](https://neovim.io/) (Developer version)            |
 |Panel             |[Xmobar](https://xmobar.org/)                               |
 |Browser           |[Firefox](https://www.mozilla.org/en-US/firefox/new/)       | 
 
