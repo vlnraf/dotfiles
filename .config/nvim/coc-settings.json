@@ -7,7 +7,6 @@
         "html",
         "yaml",
         "json",
-        "python"
     ],
     // python config
     "python.linting.enabled": true,
