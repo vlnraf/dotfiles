@@ -2,8 +2,8 @@
 set hidden
 
 " Some servers have issues with backup files, see #649.
- set nobackup
- set nowritebackup
+set nobackup
+set nowritebackup
 
 " Give more space for displaying messages.
 set cmdheight=1
