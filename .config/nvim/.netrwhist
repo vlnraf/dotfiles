@@ -1,0 +1,12 @@
+let g:netrw_dirhistmax  =10
+let g:netrw_dirhistcnt =1
+let g:netrw_dirhist_1='/home/raffaele/.local/share/jupyter/kernels/ml-project'
+let g:netrw_dirhist_0='/home/raffaele/Documents/smartapp/ml_models'
+let g:netrw_dirhist_9='/home/raffaele/Documents/smartapp/ml_models/lstm'
+let g:netrw_dirhist_8='/home/raffaele/Documents/smartapp/ml_models'
+let g:netrw_dirhist_7='/home/raffaele/Documents/smartapp/ml_models/autoencoder'
+let g:netrw_dirhist_6='/home/raffaele/Documents/smartapp/ml_models'
+let g:netrw_dirhist_5='/home/raffaele/fun/raytracing/src'
+let g:netrw_dirhist_4='/home/raffaele/fun/raytracing'
+let g:netrw_dirhist_3='/home/raffaele/.config/nvim/general'
+let g:netrw_dirhist_2='/home/raffaele/.config/nvim'
