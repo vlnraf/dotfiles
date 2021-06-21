@@ -81,8 +81,8 @@ myModMask :: KeyMask
 myModMask = mod4Mask       -- Sets modkey to super/windows key
 
 myTerminal :: String
-myTerminal = "alacritty -e tmux"   -- Sets default terminal
--- myTerminal = "alacritty"   -- Sets default terminal
+-- myTerminal = "alacritty -e tmux"   -- Sets default terminal
+myTerminal = "alacritty"   -- Sets default terminal
 
 myBrowser :: String
 myBrowser = "qutebrowser "               -- Sets qutebrowser as browser for tree select
@@ -112,9 +112,10 @@ myStartupHook = do
           spawnOnce "nitrogen --restore &"
           spawnOnce "picom &"
           spawnOnce "nm-applet &"
-          spawnOnce "volumeicon &"
+          spawnOnce "blueman-applet"
           spawnOnce "trayer --edge top --align right --widthtype request --padding 6 --SetDockType true --SetPartialStrut true --expand true --monitor 0 --transparent true --alpha 0 --tint 0x282c34  --height 22 &"
           spawnOnce "/home/raffaele/.screenlayout/screen.sh" --xrandr script for 2 monitors
+          spawnOnce "volumeicon &"
           -- spawnOnce "/usr/bin/emacs --daemon &"
           -- spawnOnce "kak -d -s mysession &"
           setWMName "LG3D"
@@ -344,6 +345,7 @@ myKeys =
         , ("M-S-k", windows W.swapUp)        -- Swap focused window with prev window
         , ("M-p", promote)         -- Moves focused window to master, others maintain order
         , ("M-d", spawn "dmenu_recency")         -- Spawn Dmenu
+        -- , ("M-d", spawn "dmenu_run")         -- Spawn Dmenu
         , ("M1-C-<Tab>", rotAllDown)         -- Rotate all the windows in the current stack
         --, ("M-S-s", windows copyToAll)
         , ("M-C-s", killAllOtherCopies)
@@ -386,8 +388,8 @@ myKeys =
         , ("<XF86AudioPrev>", spawn "cmus prev")
         , ("<XF86AudioNext>", spawn "cmus next")
         -- , ("<XF86AudioMute>",   spawn "amixer set Master toggle")  -- Bug prevents it from toggling correctly in 12.04.
-        , ("<XF86AudioLowerVolume>", spawn "amixer set Master 5%- unmute")
-        , ("<XF86AudioRaiseVolume>", spawn "amixer set Master 5%+ unmute")
+        -- , ("<XF86AudioLowerVolume>", spawn "amixer set Master 5%- unmute")
+        -- , ("<XF86AudioRaiseVolume>", spawn "amixer set Master 5%+ unmute")
         , ("<XF86Mail>", runOrRaise "geary" (resource =? "thunderbird"))
         , ("<XF86Calculator>", runOrRaise "gcalctool" (resource =? "gcalctool"))
         , ("<XF86Eject>", spawn "toggleeject")

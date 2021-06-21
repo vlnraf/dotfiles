@@ -104,7 +104,6 @@ alias oldvim="vim"
 alias protege='/opt/Protege-5.5.0/run.sh'
 alias config='/usr/bin/git --git-dir=$HOME/.dotfiles/ --work-tree=/home/raffaele'
 export EDITOR="nvim"
-# export TERM="alacritty"
 
 # eval $(ssh-agent)
 # ssh-add ~/.ssh/id_rsa
