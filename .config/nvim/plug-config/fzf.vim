@@ -1,5 +1,5 @@
 "File finder in git
-nmap <leader>F :GFiles<CR>
+nmap <leader>G :GFiles<CR>
 "file finder in project
 nmap <leader><space>  :Files<CR>
 
