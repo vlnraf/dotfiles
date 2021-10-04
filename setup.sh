@@ -24,8 +24,8 @@ install_dots()
         mkdir -p ~/.config
         chmod 700 ~/.config
         git clone --bare https://github.com/vlnraf/dotfiles $HOME/.dotfiles
-        git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME checkout
-        git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME config -- local status.showUntrackedFiles no
+        git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME checkout --force
+        git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME config --local status.showUntrackedFiles no
     }
 
 # Key apps to install
