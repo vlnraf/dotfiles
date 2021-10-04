@@ -34,6 +34,11 @@ install_key_app(){
     
     yay -S nerd-fonts-mononoki ttf-font-awesome ttf-font-awesome-4
 }
+
+install_oh_my_zsh(){
+    sudo pacman -S zsh
+    sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+}
 echo "Installing Window Manager Xmonad"
 install_xmonad
 
@@ -42,6 +47,7 @@ install_aur
 
 echo "Installing all the apps to run the system properly"
 install_key_app
+install_oh_my_zsh
 
 echo "Installing dotfiles"
 install_dots
