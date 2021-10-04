@@ -13,6 +13,10 @@ install_aur()
         makepkg -sci
     }
 
+install_xmonad(){
+    sudo pacman -S xmonad xmonad-contrib
+}
+
 # Dotfiles with git bare
 install_dots()
     {
@@ -26,11 +30,18 @@ install_dots()
 
 # Key apps to install
 install_key_app(){
-    sudo pacman -S ranger xmobar nitrogen neovim tmux alacritty
+    sudo pacman -S ranger xmobar nitrogen neovim tmux alacritty keychain ruby pyright clang ttf-ubuntu-font-family nerd-fonts-noto-sans-mono ttf-font-awesome network-manager-applet
+    
+    yay -S nerd-fonts-mononoki ttf-font-awesome ttf-font-awesome-4
 }
+echo "Installing Window Manager Xmonad"
+install_xmonad
 
-echo "Do you want to install the core apps to use at best the current system [Y/n] $1";
-if[ $1 == "y"]
-    install_key_app
-fi
+echo "Installing aur package"
+install_aur
+
+echo "Installing all the apps to run the system properly"
+install_key_app
+
+echo "Installing dotfiles"
 install_dots
