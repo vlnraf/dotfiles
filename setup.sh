@@ -23,3 +23,11 @@ install_dots()
         git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME checkout
         git --git-dir=$HOME/.dotfiles/ --work-tree=$HOME config -- local status.showUntrackedFiles no
     }
+
+# Key apps to install
+install_key_app(){
+    sudo pacman -S ranger xmobar nitrogen neovim tmux alacritty
+}
+
+install_key_app
+install_dots
