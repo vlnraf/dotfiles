@@ -30,7 +30,7 @@ install_dots()
 
 # Key apps to install
 install_key_app(){
-    sudo pacman -S ranger xmobar nitrogen neovim tmux alacritty keychain ruby pyright clang ttf-ubuntu-font-family nerd-fonts-noto-sans-mono ttf-font-awesome network-manager-applet
+    sudo pacman -S ranger xmobar nitrogen neovim tmux alacritty keychain ruby pyright clang ttf-ubuntu-font-family nerd-fonts-noto-sans-mono ttf-font-awesome network-manager-applet network-manager-applet blueman volumeicon trayer
     
     yay -S nerd-fonts-mononoki ttf-font-awesome ttf-font-awesome-4
 }
