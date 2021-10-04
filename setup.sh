@@ -29,5 +29,8 @@ install_key_app(){
     sudo pacman -S ranger xmobar nitrogen neovim tmux alacritty
 }
 
-install_key_app
+echo "Do you want to install the core apps to use at best the current system [Y/n] $1";
+if[ $1 == "y"]
+    install_key_app
+fi
 install_dots
