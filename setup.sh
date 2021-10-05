@@ -47,7 +47,6 @@ install_aur
 
 echo "Installing all the apps to run the system properly"
 install_key_app
-install_oh_my_zsh
 
 echo "Installing dotfiles"
 install_dots
