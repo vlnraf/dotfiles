@@ -27,7 +27,7 @@ to install the following system follow this steps:
     ./setup.sh
 ```
 
-
+When the installation is complete you have to reboot the system and select from the session menu in the display manager
 
 use [`dual`](https://github.com/vlnraf/dotfiles/blob/master/.zshrc) or [`single`](https://github.com/vlnraf/dotfiles/blob/master/.zshrc) in the terminal to switch from the single monitor to double monitor or the other way.
 
