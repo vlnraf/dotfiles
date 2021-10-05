@@ -15,30 +15,19 @@ Welcome to my xmonad setup!
 |Panel             |[Xmobar](https://xmobar.org/)                               |
 |Browser           |[Firefox](https://www.mozilla.org/en-US/firefox/new/)       | 
 
-### Before use neovim with this config
-
-[Coc-vim](https://github.com/neoclide/coc.nvim)
-
-**and see other plugin pages and give a look at the dependencies**
-
-### Use this bash file to install coc-extensions
-
+to install the following system follow this passages:
+- Run the zsh setup command:
 ```bash
-#!/usr/bin/bash
-
-set -o nounset    # error when referencing undefined variable
-set -o errexit    # exit when command fails
-
-# Install extensions
-mkdir -p ~/.config/coc/extensions
-cd ~/.config/coc/extensions
-if [ ! -f package.json ]
-then
-  echo '{"dependencies":{}}'> package.json
-fi
-
-npm install coc-snippets coc-python coc-tsserver coc-json coc-highlight coc-explorer coc-emoji coc-vimlsp --global-style --ignore-scripts --no-bin-links --no-package-lock --only=prod
+    chmod +x zsh_setup.sh
+    ./zsh_setup.sh
 ```
+- Run the system setup command:
+```bash
+    chmod +x setup.sh
+    ./setup.sh
+```
+
+
 
 use [`dual`](https://github.com/vlnraf/dotfiles/blob/master/.zshrc) or [`single`](https://github.com/vlnraf/dotfiles/blob/master/.zshrc) in the terminal to switch from the single monitor to double monitor or the other way.
 
