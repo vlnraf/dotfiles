@@ -15,7 +15,7 @@ Welcome to my xmonad setup!
 |Panel             |[Xmobar](https://xmobar.org/)                               |
 |Browser           |[Firefox](https://www.mozilla.org/en-US/firefox/new/)       | 
 
-to install the following system follow this passages:
+to install the following system follow this steps:
 - Run the zsh setup command:
 ```bash
     chmod +x zsh_setup.sh
