@@ -15,6 +15,7 @@ Plug 'joshdick/onedark.vim'
 "LSP nvim
 Plug 'neovim/nvim-lspconfig'
 Plug 'nvim-lua/completion-nvim'
+Plug 'ray-x/lsp_signature.nvim'
 
 "Plugin per parentesi aperte e chiuse
 "Plug 'raimondi/delimitmate'
