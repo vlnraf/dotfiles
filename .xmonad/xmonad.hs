@@ -84,8 +84,8 @@ myTerminal :: String
 -- myTerminal = "alacritty -e tmux"   -- Sets default terminal
 myTerminal = "alacritty"   -- Sets default terminal
 
-myBrowser :: String
-myBrowser = "qutebrowser "               -- Sets qutebrowser as browser for tree select
+-- myBrowser :: String
+-- myBrowser = "firefox"               
 -- myBrowser = myTerminal ++ " -e lynx " -- Sets lynx as browser for tree select
 
 myEditor :: String
@@ -298,7 +298,7 @@ myManageHook = composeAll
      , className =? "mpv"     --> doFloat   -- Float mpv application
      , (className =? "firefox" <&&> resource =? "Dialog") --> doFloat  -- Float Firefox Dialog
      , (className =? "firefox" <&&> resource =? "Toolkit") --> doFloat  -- Float Firefox toolkit
-     , (className =? "Chromium" <&&> resource =? "Toolkit") --> doFloat  -- Float Chromium toolkit
+     , (className =? "Chromium" <&&> resource =? "Toolkit") --> doFloat  -- Flot Chromium toolkit
      ] <+> namedScratchpadManageHook myScratchPads
 
 myLogHook :: X ()
@@ -387,9 +387,9 @@ myKeys =
         , ("<XF86AudioPlay>", spawn "cmus toggle")
         , ("<XF86AudioPrev>", spawn "cmus prev")
         , ("<XF86AudioNext>", spawn "cmus next")
-        -- , ("<XF86AudioMute>",   spawn "amixer set Master toggle")  -- Bug prevents it from toggling correctly in 12.04.
-        -- , ("<XF86AudioLowerVolume>", spawn "amixer set Master 5%- unmute")
-        -- , ("<XF86AudioRaiseVolume>", spawn "amixer set Master 5%+ unmute")
+        , ("<XF86AudioMute>",   spawn "amixer set Master toggle")  -- Bug prevents it from toggling correctly in 12.04.
+        , ("<XF86AudioLowerVolume>", spawn "amixer set Master 5%- unmute")
+        , ("<XF86AudioRaiseVolume>", spawn "amixer set Master 5%+ unmute")
         , ("<XF86Mail>", runOrRaise "geary" (resource =? "thunderbird"))
         , ("<XF86Calculator>", runOrRaise "gcalctool" (resource =? "gcalctool"))
         , ("<XF86Eject>", spawn "toggleeject")
