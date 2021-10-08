@@ -4,6 +4,7 @@
 # Author: vlnraf
 
 # Arch aur
+
 install_aur()
     {
         cd /tmp/
@@ -40,6 +41,50 @@ install_oh_my_zsh(){
     sudo pacman -S zsh
     sh -c "$(curl -fsSL https://raw.github.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 }
+
+choose_video_driver(){
+    # choose video driver
+    echo "1) xf86-video-intel 	2) xf86-video-amdgpu 3) nvidia 4) Skip"
+    read -r -p "Choose you video card driver(default 1)(will not re-install): " vid
+
+    case $vid in 
+    [1])
+        DRI='xf86-video-intel'
+        ;;
+
+    [2])
+        DRI='xf86-video-amdgpu'
+        ;;
+
+    [3])
+        DRI='nvidia nvidia-settings nvidia-utils'
+        ;;
+
+    [4])
+        DRI=""
+        ;;
+    [*])
+        DRI='xf86-video-intel'
+        ;;
+    esac
+
+    # install xorg if not installed
+    sudo pacman -S --noconfirm --needed rofi feh xorg xorg-xinit xorg-xinput $DRI
+
+}
+
+set -e
+
+echo "Installer for Raffaele Dotfiles" && sleep 2
+
+echo "Doing a system update, cause something can go wrong if the system is not updated to the latest version"
+sudo pacman --noconfirm -Syu
+
+# install base-devel if not installed
+sudo pacman -S --noconfirm --needed base-devel wget git
+
+choose_video_driver
+
 echo "Installing Window Manager Xmonad"
 install_xmonad
 
