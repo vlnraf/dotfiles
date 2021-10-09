@@ -5,11 +5,18 @@ set number
 set noswapfile
 set hidden
 set pumheight=10
+set noerrorbells
+
+" checks if your terminal has 24-bit color support
+if (has("termguicolors"))
+    set termguicolors
+    hi LineNr ctermbg=NONE guibg=NONE
+endif
 
 " setted for dev-icons plugin
 set encoding=UTF-8
 
-"set | per vedere indentazione
+"Use F2 to better Copy Paste with indentation
 set pastetoggle=<F2>
 
 set splitbelow
@@ -27,7 +34,7 @@ set softtabstop=4
 set autoindent
 set smartindent
 
-set nosplitbelow
+" set nosplitbelow
 
 let g:python3_host_prog = "~/Environments/env3.6/bin/python"
 
