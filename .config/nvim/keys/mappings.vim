@@ -1,3 +1,7 @@
+if (has("termguicolors"))
+  set termguicolors
+endif
+
 "open a new tab
 nnoremap <C-t> :tabnew<Space>
 
@@ -17,9 +21,9 @@ nnoremap <M-l>    :vertical resize +2<CR>
 nnoremap <C-s> :w<CR>
 
 " TAB in general mode will move to text buffer
-" nnoremap <silent> <TAB> gt
+nnoremap <silent> <TAB> gt
 " SHIFT-TAB will go back
-" nnoremap <silent> <S-TAB> gT
+nnoremap <silent> <S-TAB> gT
 
 "Setta <C-w>h per lo split delle finestre in orizzontale
 nnoremap <C-w>h :split <CR>
@@ -40,3 +44,5 @@ ino <Right> <Nop>
 " inoremap {<CR> {<CR>}<Esc>ko
 " inoremap [<CR> [<CR>]<Esc>ko
 " inoremap (<CR> (<CR>)<Esc>ko
+
+nnoremap <F5> :UndotreeToggle<cr>
