@@ -14,8 +14,15 @@ Plug 'joshdick/onedark.vim'
 
 "LSP nvim
 Plug 'neovim/nvim-lspconfig'
-Plug 'nvim-lua/completion-nvim'
+" Plug 'nvim-lua/completion-nvim'
+Plug 'hrsh7th/cmp-nvim-lsp'
+Plug 'hrsh7th/cmp-buffer'
+Plug 'hrsh7th/nvim-cmp'
 Plug 'ray-x/lsp_signature.nvim'
+
+" For vsnip user.
+" Plug 'hrsh7th/cmp-vsnip'
+" Plug 'hrsh7th/vim-vsnip'
 
 "Plugin per parentesi aperte e chiuse
 "Plug 'raimondi/delimitmate'
@@ -52,7 +59,7 @@ Plug 'junegunn/gv.vim'
 Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() } }
 
 " Treesitter
-Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
+" Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 
 " between plug#begin/plug#end
 
