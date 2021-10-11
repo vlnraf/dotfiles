@@ -6,6 +6,7 @@ set noswapfile
 set hidden
 set pumheight=10
 set noerrorbells
+set signcolumn=number
 
 " checks if your terminal has 24-bit color support
 if (has("termguicolors"))
