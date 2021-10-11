@@ -9,7 +9,7 @@ nnoremap <silent> <C-n> <cmd>lua vim.lsp.diagnostic.goto_prev()<CR>
 nnoremap <silent> <C-p> <cmd>lua vim.lsp.diagnostic.goto_next()<CR>
 
 " Set completeopt to have a better completion experience
-set completeopt=menuone,noinsert,noselect
+set completeopt=menu,menuone,noinsert,noselect
 let g:completion_matching_strategy_list = ['exact', 'substring', 'fuzzy']
 
 lua << EOF
@@ -40,9 +40,18 @@ cmp.setup({
     mapping = {
       ['<C-d>'] = cmp.mapping.scroll_docs(-4),
       ['<C-f>'] = cmp.mapping.scroll_docs(4),
+      -- ['<Backspace>'] = cmp.mapping.close(),
+      ['<Backspace>'] = function(fallback)
+    if vim.bo.buftype ~= 'prompt' and has_words_before() then
+        cmp.close()
+        fallback()
+    else
+        fallback()
+    end
+end,
       -- ['<C-Space>'] = cmp.mapping.complete(),
       ['<Tab>'] = function(fallback)
-      if not cmp.select_next_item() then
+      if not cmp.select_next_item({behavior = cmp.SelectBehavior.Insert}) then
         if vim.bo.buftype ~= 'prompt' and has_words_before() then
           cmp.complete()
         else
@@ -52,7 +61,7 @@ cmp.setup({
     end,
 
     ['<S-Tab>'] = function(fallback)
-      if not cmp.select_prev_item() then
+      if not cmp.select_prev_item({behavior = cmp.SelectBehavior.Insert}) then
         if vim.bo.buftype ~= 'prompt' and has_words_before() then
           cmp.complete()
         else
@@ -64,6 +73,9 @@ cmp.setup({
     },
     sources = {
       { name = 'nvim_lsp' },
+
+      -- For Filesystem paths
+      { name = 'path' },
 
       -- For vsnip user.
       -- { name = 'vsnip' },
@@ -83,9 +95,9 @@ cmp.setup({
 -- If you want signature uncomment this line
 -- require "lsp_signature".setup()
 
--- require'lspconfig'.jedi_language_server.setup{on_attach=on_attach}
 require'lspconfig'.pyright.setup{on_attach=on_attach}
-require'lspconfig'.clangd.setup{on_attach=attach}
+require'lspconfig'.clangd.setup{on_attach=on_attach}
+require'nvim-treesitter.configs'.setup{highlight = { enable = true } }
 
 --   require('lspconfig')[%YOUR_LSP_SERVER%].setup {
 --     capabilities = require('cmp_nvim_lsp').update_capabilities(vim.lsp.protocol.make_client_capabilities())
