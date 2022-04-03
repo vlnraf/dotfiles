@@ -107,9 +107,11 @@ export EDITOR="nvim"
 
 # eval $(ssh-agent)
 # ssh-add ~/.ssh/id_rsa
-eval `keychain --eval --nogui -Q -q id_rsa`
+# eval `keychain --eval --nogui -Q -q id_rsa`
+eval "$(ssh-agent -s)"
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
 
 # set dual monitors
 dual () {
